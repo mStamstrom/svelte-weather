@@ -1,0 +1,93 @@
+html, body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	color: #333;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+a {
+	color: rgb(0,100,200);
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:visited {
+	color: rgb(0,80,160);
+}
+
+label {
+	display: block;
+}
+
+input, button, select, textarea {
+	font-family: inherit;
+	font-size: inherit;
+	padding: 0.4em;
+	margin: 0 0 0.5em 0;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	border-radius: 2px;
+}
+
+input:disabled {
+	color: #ccc;
+}
+
+input[type="range"] {
+	height: 0;
+}
+
+button {
+  border: 0;
+  outline: none !important;
+  background-color: inherit;
+  align-items: center;
+  cursor: pointer;
+  border: 2px solid white;
+  border-radius: 8px;
+}
+
+button:disabled {
+	color: #999;
+}
+
+button:not(:disabled):active {
+	background-color: #ddd;
+}
+
+button:focus, button:hover {
+	border-color: #666;
+}
+
+
+body::after{
+  /* preload background images*/
+  position:absolute; width:0; height:0; overflow:hidden; z-index:-1;
+  content:url('./sunny.jpg') url('./rain.jpg') url('./snow.jpg') url('./clouds.jpg') url('./night.jpg');
+}
+
+.city-handler--sun {
+  background-image: url('./sunny.jpg');
+}
+.city-handler--rain {
+  background-image: url('./rain.jpg');
+}
+.city-handler--snow {
+  background-image: url('./snow.jpg');
+}
+.city-handler--clouds {
+  background-image: url('./clouds.jpg');
+}
+.city-handler--night {
+  background-image: url('./night.jpg');
+}
+
