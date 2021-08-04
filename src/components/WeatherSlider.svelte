@@ -4,10 +4,6 @@
 
   let forecastsByDay = [];
 
-	function setSelected(forecast) {
-		selectedForecast.set(forecast);
-  }
-
   forecast.subscribe(forecasts => {
     const sortedWeather = [];
       for(const weather of forecasts.list) {
@@ -36,7 +32,7 @@
       <span>{forecastDay.day}</span>
       <div class="forecast-list">
         {#each forecastDay.list as forecast}
-          <button class="forecast-button" on:click="{() => setSelected(forecast)}">
+          <button class="forecast-button" on:click="{() => selectedForecast.set(forecast)}">
             <span>
               { forecast.time }
             </span>

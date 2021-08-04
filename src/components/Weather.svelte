@@ -35,7 +35,7 @@
         { Math.round($selectedForecast.main.temp) }°
       </div>
     {:else }
-      <span>
+      <span class="loading">
         loading...
       </span>
     {/if}
@@ -55,6 +55,10 @@ section {
   background-position: center center;
   color: white;
   text-align: center;
+}
+
+.loading {
+  font-size: 10vh;
 }
 
 .selected-weather {

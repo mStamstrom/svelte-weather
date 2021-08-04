@@ -1,8 +1,10 @@
 <script>
 	import Weather from './components/Weather.svelte'
+	import Menu from './components/Menu.svelte';
 </script>
 
 <main>
+	<Menu />
 	<Weather />
 </main>
 

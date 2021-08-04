@@ -50,3 +50,13 @@ export function getWeatherForecast(id) {
       throw new Error(res.statusText);
     });
 }
+
+export function getWeatherForecastByName(name) {
+  return fetch(`${baseUrl}forecast?q=${name}&appid=${apiKey}&units=metric`)
+    .then((res) => {
+      if (res.status === 200) {
+        return res.json();
+      }
+      throw new Error(res.statusText);
+    });
+}
